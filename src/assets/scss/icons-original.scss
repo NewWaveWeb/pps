@@ -1,0 +1,227 @@
+.level-icon{
+  border-color: #fff;
+  border-style: solid;
+  background-color: transparent;
+  position: relative;
+  display: block;
+  /*__ eyes */
+  &:before,
+  &:after{
+    @include square(18%);
+    @include border-radius (50%);
+    @include position(relative,29%,auto,auto,22%,inherit);
+    content: "";
+    float: left;
+
+  }
+  &:after{
+    right: 22%;
+    left: auto;
+    float: right;
+  }
+
+  .face{
+    display:block;
+    &:before,
+    &:after{
+      background-color: #fff;
+    }
+  }
+}
+
+/*__ Level Icon structure */
+
+/*__ SUCCESS */
+.result-success{
+  .level-icon{
+    background-color: $brand-success;
+    &:before,
+    &:after{
+      background-color: #fff;
+    }
+    .face{
+      @include position(absolute,67%,auto,auto,16.5%,inherit);
+      width: 70%;
+      height: 20%;
+      overflow: hidden;
+      &:before,
+      &:after{
+        @include position(absolute,-50%,auto,auto,0,inherit);
+        @include border-radius(50%);
+        content: "";
+        height: 100%;
+        width: 97%;
+      }
+      &:after {
+        height: 80%;
+        top: -40%;
+        left: 0%;
+      }
+    }
+  }
+}
+
+/*__ WARNING */
+.result-warning{
+  .level-icon{
+    background-color: $brand-warning;
+    &:before,
+    &:after{
+      background-color: #fff;
+    }
+    .face{
+      &:before{
+        @include position(absolute,67%,auto,auto,19%,inherit);
+        @include border-radius($main-border-raduis);
+        content: "";
+        width: 65%;
+        height: 14%;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+/*__ DANGER */
+.result-danger{
+  .level-icon{
+    background-color: $brand-danger;
+    &:before,
+    &:after{
+      background-color: #fff;
+    }
+    .face{
+      @include position(absolute,57%,auto,auto,16.5%,inherit);
+      width: 70%;
+      height: 20%;
+      overflow: hidden;
+      &:before,
+      &:after{
+        @include position(absolute,50%,auto,auto,0,inherit);
+        @include border-radius(50%);
+        content: "";
+        height: 100%;
+        width: 97%;
+      }
+      &:after {
+        height: 80%;
+        top: 60%;
+        left: 0%;
+      }
+    }
+  }
+}
+
+/*__ Neutral */
+.result-neutral{
+  .level-icon{
+    background-color: $brand-neutral;
+    &:before,
+    &:after{
+      background-color: #fff;
+    }
+    .face{
+      &:before{
+        @include position(absolute,67%,auto,auto,19%,inherit);
+        @include border-radius($main-border-raduis);
+        content: "";
+        width: 65%;
+        height: 14%;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+
+/*__ Sidebar Arrow icon */
+.arrow {
+  fill: none;
+  stroke: $text-color-light;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+
+
+
+.icon,
+    .icon::before,
+    .icon::after
+    {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    .icon {
+        font-size: 36px;
+        color: transparent;
+    }
+
+
+.icon.info,
+    .icon.good,
+    .icon.bad
+    {
+        display: inline-block;
+        top: 0.15em;
+        width: 1em;
+        height: 1em;
+
+        overflow: hidden;
+        border: none;
+        border-radius: 0.5em;
+        box-shadow: #999 0 1px 1px;
+    }
+
+    .icon.info::after,
+    .icon.good::after,
+    .icon.bad::after 
+    {
+        display: block;
+        position: absolute;
+        top: 0.25em;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-family: "Times New Roman", "Garamond", serif;
+        font-size: 0.65em;
+        color: white;
+    }
+
+    // info // 
+
+    .icon.info {
+        background-color: #33c;
+    }
+
+    .icon.info::after {
+        font-style: italic;
+        font-weight: bold;
+        content: "i";
+    }
+
+
+    // good // 
+
+    .icon.good {
+        background-color: #393;
+    }
+
+    .icon.good::after {
+        left: 0.012em;
+        content: "\2713";
+    }
+
+    // bad // 
+
+    .icon.bad {
+        background-color: #933;
+    }
+
+    .icon.bad::after {
+        content: "x";
+        font-weight: bold;
+    }

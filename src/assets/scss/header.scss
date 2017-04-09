@@ -1,0 +1,46 @@
+/*__  Main Article Header */
+
+/*__  Main Header Color Scheme */
+.article-header{
+  /*__  level icon */
+  .level-icon{
+    @include position(absolute,7px,7px,auto,auto,inherit);
+    @include circle(20px);
+    border-width: 2px;
+    float: right;
+    background-color: #fff;   
+  }
+}
+
+/*__  article header icon holder */
+.article-header{
+  .header-icon-holder{
+    @include circle(35px);
+    @include position(relative,-46px,-11px,auto,auto,inherit);
+    @include box-shadow-out(0,1px,4px,rgba(0,0,0,0.2));
+    float: right;
+    background-color: #fff;
+    @media (min-width: $layout-breakpoint){
+      top: -35px;
+    }
+  }
+}
+
+/*__  Main Header elements */
+.title{
+  position: relative;
+  padding-left: 15px;
+  @media (min-width: $layout-breakpoint){
+    padding-left: 0;
+  }
+  /*__  arrow icon */
+  .arrow{
+    @include position(absolute,-5px,auto,auto,-16px,inherit);
+    @include animation-transform(rotate(-90deg));
+    width: 30px;
+    stroke: #fff; 
+    @media (min-width: $layout-breakpoint){
+      display: none;
+    }      
+  }
+}

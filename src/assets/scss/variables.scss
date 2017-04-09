@@ -1,0 +1,52 @@
+// Main Structure Variables
+//--------------------------------------------------------------------------------------
+
+//__ Layout
+$header-height:               	80px !default;
+
+$sidebar-width:           		  100% !default;
+$sidebar-items-space:			      6px !default;
+$sidebar-item-height:			      56px !default;
+$sidebar-item-padding-h:		    32px !default;
+
+$article-main-padding:    		  40px !default;
+$article-max-width:       		  1170px !default;
+$article-header-height:   		  70px !default;
+
+//__ Main Zindex
+$header-zindex:					        10 !default;
+$tooltip-zindex:				        9 !default;
+
+//__ Responsive Breakpints
+$layout-breakpoint:           	500px !default;
+$tablet-screen:               	1024px !default;
+
+//__ Colors
+$text-color:              		  #333 !default;
+$text-color-light:        		  lighten($text-color, 10%) !default;
+$brand-success:             	  #69b01b !default; // green
+$brand-warning:            		  #f6db23 !default; // yellow
+$brand-danger:               	  #ff9102 !default; // red
+$brand-neutral:					        lighten($text-color, 35%) !default;
+$body-bg-color:           		  #f9f9f9 !default;
+
+//__ Fonts
+$font-family-base:        		  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$line-height-base:        		  1.4 !default;
+$line-height-small:				      1.2 !default;
+
+// Fonts Sizes
+$font-size-base:          		  16px !default;
+$font-size-large:         		  ceil(($font-size-base * 1.25)) !default; // ~20px
+$font-size-small:         		  ceil(($font-size-base * 0.85)) !default; // ~14px
+$font-size-xsmall:         		  ceil(($font-size-base * 0.7)) !default; // ~12px
+$article-main-title:			      floor(($font-size-base * 1.5)) !default; // ~24px;
+$article-sub-title:				      floor(($font-size-base * 1.15)) !default; // ~18px
+$card-main-font-size:			      $article-sub-title !default;
+$main-overall-level:			      ceil(($font-size-base * 3.125)) !default; // ~40px
+
+//__ Border Radius
+$main-border-raduis:      		  3px !default;
+
+//__ Main animation speed
+$main-animation-speed:   		     0.25s !default;

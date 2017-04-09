@@ -1,0 +1,40 @@
+{{~Object.keys(it.snapshot) :key}}
+  <article class="result-{{=it.snapshot[key].score}}" id="{{=key}}">
+    <div class="article-header">
+      <div class="title">
+        <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#{{=key}}"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
+        <p class="article-title">{{=it.snapshot[key].label_long}}</p>
+        <p class="article-subtitle">{{=it.snapshot[key].subtitle}}</p>
+        {{? it.snapshot[key].score === 'success'}}
+          <p class="screen-reader-text">Adherence to privacy best practices.</p>
+        {{?? it.snapshot[key].score === 'warning'}}
+          <p class="screen-reader-text">Minor concerns about information privacy.</p>
+        {{?? it.snapshot[key].score === 'danger'}}
+          <p class="screen-reader-text">Warnings about information privacy.</p>
+        {{??}}
+          <p class="screen-reader-text">More information on data handling. Not scored.</p>
+        {{?}}
+        <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-{{=it.snapshot[key].score}}"></span></div>
+      </div>
+    </div>
+    {{~it.snapshot[key].content :item}}
+      <div class="card">
+        <div class="card-body">
+            {{? item.label !== ''}}
+            <p class="card-title">{{=item.label}}</p>
+            {{?}}
+            <ul>
+              {{~item.answers :statement}}
+                <li>{{=statement}}</li>
+              {{~}}
+            </ul>
+        </div>
+        {{?item.label_negative !== ''}}
+        <div class="card-footer">
+          {{=item.label_negative}}
+        </div>
+        {{?}}
+      </div>
+    {{~}}
+  </article>
+{{~}}

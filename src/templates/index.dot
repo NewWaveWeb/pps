@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{#def.head}}
+    <body>
+      <section class="wrapper" id="top">
+        <aside class="sidebar">
+          <div class="overall-result">
+            <p class="overall-title">{{=it.application}}</p>
+            <p class="overall-subtitle">Privacy Policies</p>
+          </div>
+          <ul class="color-details-explain">
+            <li class="result-success">Adherence to privacy best practices.</li>
+            <li class="result-warning">Minor concerns about information privacy.</li>
+            <li class="result-danger">Warnings about information privacy.</li>
+            <li class="result-neutral">More information on data handling. Not scored.</li>
+          </ul>
+          {{#def.snapshot_mobile}}
+        </aside>
+
+        <header>
+          <div class="overall-result">
+            <p class="overall-title">{{=it.application}}</p>
+            <p class="overall-subtitle">Privacy Policies</p>
+          </div>
+        </header>
+
+        <ul class="color-details-explain desktop-overall">
+            <li class="result-success">Adherence to privacy best practices.</li>
+            <li class="result-warning">Minor concerns about information privacy.</li>
+            <li class="result-danger">Warnings about information privacy.</li>
+            <li class="result-neutral">More information on data handling. Not scored.</li>
+        </ul>
+
+        {{#def.snapshot_desktop}}
+
+        {{#def.card}}
+
+        <!-- Policy Change Information -->
+        <article class="result-neutral" id="policychange">
+          <div class="article-header">
+            <div class="title">
+              <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#policychange"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
+              <p class="article-title">Policy Changes</p>
+              <p class="article-subtitle">How we will notify you if our privacy policy changes</p>
+              <p class="screen-reader-text">More information on data handling. Not scored.</p>
+              <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p>If the privacy police changes we will notify you {{=it.privacy_policy_change}}.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Breach Information -->
+        <article class="result-neutral" id="breach">
+          <div class="article-header">
+            <div class="title">
+              <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#breach"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
+              <p class="article-title"><em>Breach</em><sup data-toggle="sup-text" data-target="#24"><strong>!</strong><span class="tooltip" id="24"><strong>Breach means:</strong> an unauthorized disclosure.</span></sup></p>
+              <p class="article-subtitle">How we will notify you and protect your data in case of an improper disclosure</p>
+              <p class="screen-reader-text">More information on data handling. Not scored.</p>
+              <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p><strong>{{=it.legal_entity_name}}</strong> complies with all applicable laws regarding breaches.</p>
+              <p>In case of a breach we will notify you {{=it.breach}}</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Contact Us Information -->
+        <article class="result-neutral" id="contactus">
+          <div class="article-header">
+            <div class="title">
+              <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#contactus"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
+              <p class="article-title">Contact Us</p>
+              <p class="article-subtitle">&nbsp;</p>
+              <p class="screen-reader-text">More information on data handling. Not scored.</p>
+              <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p>
+                Legal Entity Name: <strong>{{=it.legal_entity_name}}</strong><br />
+                Link to full privacy policy: <a href="{{=it.privacy_policy_link}}" target="_blank">{{=it.privacy_policy_link}}</a><br />
+                Email: {{=it.email}}<br />
+                Tel: {{=it.phone}}<br />
+                Address: {{=it.address}}<br />
+                Leave us a message: <a href="{{=it.contact_link}}" target="_blank">{{=it.contact_link}}</a><br />
+              </p>
+            </div>
+          </div>
+        </article>
+        <!-- back to top -->
+        <a href="#top" tabindex="-1" aria-hidden="true" class="backtotop" id="back-to-top">top</a>
+      </section>
+    </body>
+</html>

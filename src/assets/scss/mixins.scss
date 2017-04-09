@@ -1,0 +1,111 @@
+//__ Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+//__ Elemento Position
+@mixin position ($element-position, $top-position, $right-position, $bottom-position, $left-position, $element-zindex) {
+  position: $element-position;
+  top: $top-position;
+  right: $right-position;
+  bottom: $bottom-position;
+  left: $left-position;
+  z-index: $element-zindex;
+}
+
+//__ Animation Easing
+@mixin animation($duration) {
+  -webkit-transition:   $duration;
+    -moz-transition:    $duration;
+    -ms-transition:     $duration;
+    -o-transition:      $duration;
+    transition:         $duration;
+}
+
+//__ Animation Transform Base
+@mixin animation-transform ($string){
+	-webkit-transform: 		$string;
+	-moz-transform: 	 	$string;
+	-ms-transform: 		 	$string;
+	-o-transform: 		 	$string;
+}
+
+//__ Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+//__ Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius:    $radius;
+  -moz-border-radius:       $radius;
+  border-radius:            $radius;
+  -moz-background-clip:     padding;
+  -webkit-background-clip:  padding-box;
+  background-clip:          padding-box;
+}
+
+//__ Border Radius Individual
+@mixin border-radius-individual ($border-top-left, $border-top-right, $border-bottom-right, $border-bottom-left) {
+  -webkit-border-top-right-radius:    $border-top-right;
+  -webkit-border-bottom-right-radius: $border-bottom-right;
+  -webkit-border-bottom-left-radius:  $border-bottom-left;
+  -webkit-border-top-left-radius:     $border-top-left;
+  -moz-border-radius-topright:        $border-top-right;
+  -moz-border-radius-bottomright:     $border-bottom-right;
+  -moz-border-radius-bottomleft:      $border-bottom-left;
+  -moz-border-radius-topleft:         $border-top-left;
+  border-top-right-radius:            $border-top-right;
+  border-bottom-right-radius:         $border-bottom-right;
+  border-bottom-left-radius:          $border-bottom-left;
+  border-top-left-radius:             $border-top-left;
+  -moz-background-clip:               padding;
+  -webkit-background-clip:            padding-box;
+  background-clip:                    padding-box;
+}
+
+//__ Box shadow
+@mixin box-shadow-out ($x-axis, $y-axis, $blur, $color) {
+  -webkit-box-shadow: 	$x-axis $y-axis $blur $color;
+  -moz-box-shadow: 		$x-axis $y-axis $blur $color;
+  box-shadow: 			$x-axis $y-axis $blur $color;
+}
+
+//__ Element Vertical alignment
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  @include animation-transform(translateY(-50%));
+}
+
+//__ Square Shapes
+@mixin square($square-size) {
+  width:  $square-size;
+  height:   $square-size;
+}
+
+//__ Circle Shapes
+@mixin circle ($circle-size){
+  @include square($circle-size);
+  @include border-radius(50%);
+}
+
+//__ Text Shadow
+@function setShadow($color, $length) {
+    $value: 0 0 $color;
+
+    @for $i from 1 through $length {
+        $value: #{$value}, #{$i}px #{$i}px #{$color};
+    }
+
+    @return $value;
+}
+
+@mixin text-shadow($color, $length:200) {
+    text-shadow: setShadow($color, $length);
+}

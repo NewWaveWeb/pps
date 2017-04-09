@@ -1,0 +1,81 @@
+
+/*__ Sidebar Arrow icon */
+.arrow {
+  fill: none;
+  stroke: $text-color-light;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+
+.level-icon{
+  font-size: 36px;
+  color: transparent;
+  &,
+  &:before,
+  &:after{
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  &.icon-success,
+  &.icon-warning,
+  &.icon-danger,
+  &.icon-neutral{
+    display: inline-block;
+    top: 0.15em;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: #999 0 1px 1px;
+    &:after{
+      display: block;
+      position: absolute;
+      top: 0.15em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.65em;
+      color: white;
+      font-weight: normal;
+    }
+  }
+}
+/*__ icons */
+.level-icon{
+  &.icon-success{
+    background-color: $brand-success;
+    background-image: url('images/green-texture.jpg');
+    &:after {
+      left: 0em;
+      top: 0.08em;
+      content: "\2713";
+    }
+  }
+
+  &.icon-warning{
+    background-color: $brand-warning;
+    background-image: url('images/yellow-texture.jpg');
+    &:after {
+      content: "!";
+    }
+  }
+
+  &.icon-danger{
+    background-color: $brand-danger;
+    background-image: url('images/red-texture.jpg');
+    &:after{
+      content: "!!";
+    }
+  }
+  &.icon-neutral{
+    background-color: $brand-neutral;
+    &:after{
+      content: "i";
+      top: 4px;
+    }
+  }
+}

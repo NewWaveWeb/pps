@@ -1,0 +1,84 @@
+/*__  Main sidebar Layout */
+.sidebar{
+    /*__ Sidebar nav */
+  	ul.nav{
+     
+	  padding: 5px;
+      clear: both;
+	  	li{
+	  		margin-bottom: $sidebar-items-space;
+	  		position: relative;
+	  		overflow: hidden;
+	  		a{
+			    @include border-radius($main-border-raduis);
+  				@include box-shadow-out(0,1px,3px,rgba(0,0,0,0.1));
+  				@extend .center-element;
+  				line-height: $line-height-small;
+  				background-color: #fff;
+			    display: block;
+			    height: $sidebar-item-height;
+			    padding-right: $sidebar-item-padding-h;
+			    padding-left: ($sidebar-item-padding-h + 20px);
+			    padding-top: 10px;
+			    font-weight: bold;
+			    small{
+			      display: block;
+			      font-size: 75%;
+			      font-weight: normal;
+			    }
+			    .level-icon{
+			    	@include position(absolute,15%,auto,auto,0,inherit);
+			    }
+			}
+	  	}
+  	}
+}
+
+/*__  Main Sidebar Styles */
+.sidebar a{
+	color: $text-color;
+	text-decoration: none;
+	small{
+		color: $text-color-light;
+	}
+}
+
+/*__  Item Sidebar Arrow Icon */
+.sidebar{
+	li .arrow {
+		width: 14px;
+		@include position(absolute,40%,10px,auto,auto,inherit);
+	}
+}
+
+/*__ Onclick Effect */
+.ink {
+  display: block;
+  position: absolute;
+  background:rgba(0, 0, 0, 0.17);
+  border-radius: 100%;
+  -webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+.animate {
+-webkit-animation:ripple 0.2s linear;
+   -moz-animation:ripple 0.2s linear;
+    -ms-animation:ripple 0.2s linear;
+     -o-animation:ripple 0.2s linear;
+        animation:ripple 0.2s linear;
+}
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}

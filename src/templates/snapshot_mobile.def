@@ -1,0 +1,13 @@
+<ul class="nav" aria-hidden="true">
+  {{~Object.keys(it.snapshot) :key}}
+    <li class="result-{{=it.snapshot[key].score}}">
+      <a href="#" class="sidebar-link" data-toggle="side-link" tabindex="-1" aria-hidden="true" data-target="#{{=key}}">
+        <span class="level-icon icon-{{=it.snapshot[key].score}}"></span>{{=it.snapshot[key].label_long}}<small>{{=it.snapshot[key].subtitle}}</small>
+        <svg class="arrow" viewBox="0 0 24 24"><polyline points="7.76 3.52 16.24 12 7.76 20.48" /></svg>
+      </a>
+    </li>
+  {{~}}
+  <li class="result-neutral"><a href="#" class="sidebar-link" data-toggle="side-link" tabindex="-1" aria-hidden="true" data-target="#policychange"><span class="level-icon icon-neutral"></span>Policy Changes<small>How we will notify you if our privacy policy changes</small><svg class="arrow" viewBox="0 0 24 24"><polyline points="7.76 3.52 16.24 12 7.76 20.48" /></svg></a></li>
+  <li class="result-neutral"><a href="#" class="sidebar-link" data-toggle="side-link" tabindex="-1" aria-hidden="true" data-target="#breach"><span class="level-icon icon-neutral"></span>Breach<small>How we will notify you and protect your data in case of an improper disclosure</small><svg class="arrow" viewBox="0 0 24 24"><polyline points="7.76 3.52 16.24 12 7.76 20.48" /></svg></a></li>
+  <li class="result-neutral"><a href="#" class="sidebar-link" data-toggle="side-link" tabindex="-1" aria-hidden="true" data-target="#contactus"><span class="level-icon icon-neutral"></span>Contact Us<small>&nbsp;</small><svg class="arrow" viewBox="0 0 24 24"><polyline points="7.76 3.52 16.24 12 7.76 20.48" /></svg></a></li>
+</ul>

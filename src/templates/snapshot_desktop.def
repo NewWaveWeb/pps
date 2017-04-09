@@ -1,0 +1,10 @@
+<ul class="result-thumbs" aria-hidden="true">
+  {{~Object.keys(it.snapshot) :key}}
+    <li class="result-{{=it.snapshot[key].score}}">
+      <a href="#{{=key}}" tabindex="-1" aria-hidden="true">
+        <span class="level-icon icon-{{=it.snapshot[key].score}}"></span>{{=it.snapshot[key].label}}
+      </a>
+    </li>
+  {{~}}
+  <li class="result-neutral"><a href="#policychange" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span>Info</a></li>
+</ul>

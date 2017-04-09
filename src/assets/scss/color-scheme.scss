@@ -1,0 +1,127 @@
+/*__ Overall Ranking Color Scheme */
+.overall-ranking{
+  &.result-success{
+    background-color: $brand-success;
+    background-image: url('images/green-texture.jpg');
+    border-color: lighten($brand-success, 25%);
+  }
+
+  &.result-warning{
+    background-color: $brand-warning;
+    background-image: url('images/yellow-texture.jpg');
+    border-color: lighten($brand-warning, 25%);
+  }
+
+  &.result-danger{
+    background-color: $brand-danger;
+    background-image: url('images/red-texture.jpg');
+    border-color: lighten($brand-danger, 25%);
+  }
+}
+
+/*__ Main Article content Color Scheme */
+.result-success{
+  .article-header{
+    @media (max-width: $layout-breakpoint){
+      background-color: $brand-success;
+      background-image: url('images/green-texture.jpg');
+    }
+    @media (min-width: $layout-breakpoint){
+      border-color: $brand-success;
+    }
+  }
+}
+
+.result-warning{
+  .article-header{
+    @media (max-width: $layout-breakpoint){
+      background-color: $brand-warning;
+      background-image: url('images/yellow-texture.jpg');
+    }
+    @media (min-width: $layout-breakpoint){
+      border-color: $brand-warning;
+    }
+  }
+}
+
+.result-danger{
+  .article-header{
+    @media (max-width: $layout-breakpoint){
+      background-color: $brand-danger;
+      background-image: url('images/red-texture.jpg');
+    }
+    @media (min-width: $layout-breakpoint){
+      border-color: $brand-danger;
+    }
+  }
+}
+
+.result-neutral{
+  .article-header{
+    @media (max-width: $layout-breakpoint){
+      background-color: $brand-neutral;
+    }
+    @media (min-width: $layout-breakpoint){
+      border-color: $brand-neutral;
+    }
+  }
+}
+
+
+
+/*__  Color for icons & Color Details Explains */
+.sidebar li,
+.color-details-explain li{
+	&.result-success:before{
+		background-color: $brand-success;
+    background-image: url('images/green-texture.jpg');
+	}
+	&.result-warning:before{
+		background-color: $brand-warning;
+    background-image: url('images/yellow-texture.jpg');
+	}
+	&.result-danger:before{
+		background-color: $brand-danger;
+    background-image: url('images/red-texture.jpg');
+	}
+  &.result-neutral:before{
+		background-color: $brand-neutral;
+	}
+}
+
+/*__  Main Colors */
+.brand-green{
+  color: $brand-success;
+}
+.brand-yellow{
+  color: $brand-warning;
+}
+.brand-red{
+  color: $brand-danger;
+}
+.text-color{
+  color: $text-color;
+}
+.text-color-light{
+  color: $text-color-light;
+}
+
+/*__  Background Colors */
+.brand-green-bg{
+  background-color: $brand-success;
+  background-image: url('images/green-texture.jpg');
+}
+.brand-yellow-bg{
+  background-color: $brand-warning;
+  background-image: url('images/yellow-texture.jpg');
+}
+.brand-red-bg{
+  background-color: $brand-danger;
+  background-image: url('images/red-texture.jpg');
+}
+.text-color-bg{
+  background-color: $text-color;
+}
+.text-color-light-bg{
+  background-color: $text-color-light;
+}

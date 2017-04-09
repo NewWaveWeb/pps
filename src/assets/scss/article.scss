@@ -1,0 +1,107 @@
+/*__  Main Article Styles */
+article{
+  @extend .center-element;
+  @media (min-width: $layout-breakpoint){
+    @include border-radius($main-border-raduis);
+    @include box-shadow-out(0,0,8px,rgba(0,0,0,0.2));
+    width: 70%;
+  }
+  @media (max-width: $tablet-screen){
+    width: 90%;
+  }
+  @media (max-width: $layout-breakpoint){
+    width: 100%;
+    padding: 20px 0;
+  }
+  /*__  article main header */
+  .article-header{
+    position: relative;
+    padding: 10px 20px;
+    @media (min-width: $layout-breakpoint){
+      @include border-radius-individual ($main-border-raduis, $main-border-raduis, 0, 0);
+      background-color: $body-bg-color;
+      margin-bottom: 15px;
+    }
+    @media (max-width: $layout-breakpoint){
+      @include animation($main-animation-speed ease-in-out);
+      @include position (fixed,0,0,auto,auto,inherit);
+      @include opacity(0);
+      color: #fff;
+      height: $article-header-height;
+      padding-top:0;
+      padding-bottom: 0;
+      width: 0;
+      visibility: hidden;
+      .title{
+        @include vertical-align();
+      }
+    }
+  }
+  + article{
+    @media (min-width: $layout-breakpoint){
+      margin-top: 40px;
+    }
+  }
+}
+
+
+
+/*__  Article Header Detail */
+.article-header{
+  @media (min-width: $layout-breakpoint){
+     border-top: 8px solid transparent;
+  }
+
+  /*__ Header level icon holder */
+  .header-icon-holder{
+    @include position(absolute,0,auto,auto,-15px,inherit);
+    float: left;
+    @media (max-width: $layout-breakpoint){
+      display: none;
+    }
+  }
+}
+
+/*__  Main Header elements */
+.title{
+  position: relative;
+  padding-left: 15px;
+  @media (min-width: $layout-breakpoint){
+    padding-left: 0;
+  }
+  /*__ Article main title */
+  .article-title{
+    font-size: $article-main-title;
+    line-height: 1;
+    letter-spacing: 1px;
+    @media (min-width: $layout-breakpoint){
+      padding-left: 32px;
+    }
+    @media (max-width: $layout-breakpoint){
+      font-size: $font-size-large;
+      //@include text-shadow(rgba(0,0,0,0.6), 1);
+    }
+  }
+  .article-subtitle{
+    display: block;
+    font-size: $article-sub-title;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    @media (min-width: $layout-breakpoint){
+      padding-left: 32px;
+    }
+    @media (max-width: $layout-breakpoint){
+      font-size: $font-size-small;
+    }
+  }
+  /*__  arrow icon */
+  .arrow{
+    @include position(absolute,-5px,auto,auto,-16px,inherit);
+    @include animation-transform(rotate(-90deg));
+    width: 30px;
+    stroke: #fff;
+    @media (min-width: $layout-breakpoint){
+      display: none;
+    }
+  }
+}

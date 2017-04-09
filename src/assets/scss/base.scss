@@ -1,0 +1,37 @@
+/*__ HTML BASE */
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html,
+body{
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  overflow-x:hidden;
+}
+
+body{
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  position: relative;
+  @media (max-width: $layout-breakpoint){
+    background-color: $body-bg-color;
+  }
+  @media (min-width: $layout-breakpoint){
+    padding-top: ($header-height * 1);
+  }
+}
+/*__ Readers Only */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}

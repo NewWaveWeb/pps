@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/NewWaveWeb/pps"
+    "url": "https://github.com/NewWaveWeb/pps"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://bitbucket.org/NewWaveWeb/pps/issues"
+    "url": "https://github.com/NewWaveWeb/pps/issues"
   },
-  "homepage": "https://bitbucket.org/NewWaveWeb/pps",
+  "homepage": "https://github.com/NewWaveWeb/pps",
   "engines": {
     "node": "6.10.1",
     "npm": "3.10.10"

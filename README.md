@@ -15,10 +15,6 @@ Install node and npm
 ## [Installation]
 
 ``` shell
-npm install NewWaveWeb/pps
-
-or
-
 git clone git@github.com:NewWaveWeb/pps.git
 ```
 

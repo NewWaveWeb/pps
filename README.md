@@ -1,5 +1,4 @@
 # Privacy Policy Snapshot Generator
------------------------------------
 A command-line application for the MPN generator challenge.
 
 ## [Demo]

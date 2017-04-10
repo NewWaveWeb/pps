@@ -2,6 +2,7 @@
 A command-line application for the MPN generator challenge.
 
 ## [Demo]
+Screencast, Video Demo -> [Privacy Policy Video Demo](https://drive.google.com/open?id=0B3I3riJVpHMJeGlCNG1Pd0VGQkE)
 Take a look at the demo generated in the screencast -> [Privacy Policy Snapshot Demo](http://pps.nwwtest.com)
 
 ## [Requirements]

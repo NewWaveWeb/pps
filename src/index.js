@@ -93,6 +93,7 @@ inquirer.prompt([
 	return inquirer.prompt([
 		questions.useroptions_1,
 		questions.useroptions_1_options,
+		questions.useroptions_1_options_1_1,
 	]).then((userOptionsAnswers) => {
 		return Promise.resolve(Object.assign(answers, userOptionsAnswers));
 	});

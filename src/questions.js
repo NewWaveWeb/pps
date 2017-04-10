@@ -616,7 +616,7 @@ const questions = {
 		name: 'useroptions_1_options_1_1',
 		message: 'Please insert instructions or a link to instructions on how consumers can perform the selected actions:',
 		when: function(answers) {
-			return (answers.useroptions_1_options.indexOf('useroptions_1_options_1') !== -1 || answers.useroptions_1_options.indexOf('useroptions_1_options_2') !== -1 || answers.useroptions_1_options.indexOf('useroptions_1_options_3') !== -1 || answers.useroptions_1_options.indexOf('useroptions_1_options_4') !== -1);
+			return (answers.useroptions_1_options && (answers.useroptions_1_options.indexOf('useroptions_1_options_1') !== -1 || answers.useroptions_1_options.indexOf('useroptions_1_options_2') !== -1 || answers.useroptions_1_options.indexOf('useroptions_1_options_3') !== -1 || answers.useroptions_1_options.indexOf('useroptions_1_options_4') !== -1));
 		},
 		validate: function(input) {
 			return (!input.length) ? 'This information is required' : true;

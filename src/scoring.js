@@ -158,6 +158,9 @@ const getScore = (answers) => {
 			}
 			results[ category ][ question ] = COLORS[ questionScore ];
 			results[ category ].score = COLORS[ questionScore ];
+			if (question === 'privacy_3' || question === 'privacy_4') {
+				results.privacy.score = COLORS[ 3 ];
+			}
 		}
 	});
 	return results;

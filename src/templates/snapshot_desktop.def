@@ -6,5 +6,5 @@
       </a>
     </li>
   {{~}}
-  <li class="result-neutral"><a href="#policychange" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span>Info</a></li>
+  <li class="result-neutral"><a href="#policychange" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span>General Info</a></li>
 </ul>

@@ -31,7 +31,7 @@ const getWeDoNot = (answers, texts, service = '') => {
 	selected.map((text) => {
 		statements.push(texts[ text ]);
 	});
-	return statements.join(', ').replace('[service]', service);
+	return `${statements.join(', ').replace('[service]', service)}.`;
 };
 
 const getUse = (answers) => {
@@ -61,7 +61,7 @@ const getNotUse = (answers) => {
 	selected.map((text) => {
 		statements.push(Texts.use.use_1.options[ text ]);
 	});
-	return `${Texts.use.use_1.label_negative} ${statements.join(', ').replace('[service]', answers.about_2)}`;
+	return `${Texts.use.use_1.label_negative} ${statements.join(', ').replace('[service]', answers.about_2)}.`;
 };
 
 const getShare = (answers, prefix) => {
@@ -103,7 +103,7 @@ const getNotShare = (answers, prefix) => {
 	selected.map((text) => {
 		statements.push(Texts.share[ prefix ].options[ text ].replace('[service]', answers.about_2));
 	});
-	return `${Texts.share[ prefix ].label_negative} ${statements.join(', ').replace('[service]', answers.about_2)}`;
+	return `${Texts.share[ prefix ].label_negative} ${statements.join(', ').replace('[service]', answers.about_2)}.`;
 };
 
 const getEncryption = (answers, prefix) => {

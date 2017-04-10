@@ -6,13 +6,13 @@
         <aside class="sidebar">
           <div class="overall-result">
             <p class="overall-title">{{=it.application}}</p>
-            <p class="overall-subtitle">Privacy Policies</p>
+            <p class="overall-subtitle">Privacy Policy</p>
           </div>
           <ul class="color-details-explain">
-            <li class="result-success">Adherence to privacy best practices.</li>
+            <li class="result-success">Adheres to privacy best practices.</li>
             <li class="result-warning">Minor concerns about information privacy.</li>
-            <li class="result-danger">Warnings about information privacy.</li>
-            <li class="result-neutral">More information on data handling. Not scored.</li>
+            <li class="result-danger">Warning about information privacy.</li>
+            <li class="result-neutral">More information on data handling (not scored).</li>
           </ul>
           {{#def.snapshot_mobile}}
         </aside>
@@ -20,15 +20,15 @@
         <header>
           <div class="overall-result">
             <p class="overall-title">{{=it.application}}</p>
-            <p class="overall-subtitle">Privacy Policies</p>
+            <p class="overall-subtitle">Privacy Policy</p>
           </div>
         </header>
 
         <ul class="color-details-explain desktop-overall">
-            <li class="result-success">Adherence to privacy best practices.</li>
+            <li class="result-success">Adheres to privacy best practices.</li>
             <li class="result-warning">Minor concerns about information privacy.</li>
-            <li class="result-danger">Warnings about information privacy.</li>
-            <li class="result-neutral">More information on data handling. Not scored.</li>
+            <li class="result-danger">Warning about information privacy.</li>
+            <li class="result-neutral">More information on data handling (not scored).</li>
         </ul>
 
         {{#def.snapshot_desktop}}
@@ -42,13 +42,13 @@
               <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#policychange"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
               <p class="article-title">Policy Changes</p>
               <p class="article-subtitle">How we will notify you if our privacy policy changes</p>
-              <p class="screen-reader-text">More information on data handling. Not scored.</p>
+              <p class="screen-reader-text">More information on data handling (not scored).</p>
               <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span></div>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <p>If the privacy police changes we will notify you {{=it.privacy_policy_change}}.</p>
+              <p>If our privacy policy changes, we will notify you. {{=it.privacy_policy_change}}</p>
             </div>
           </div>
         </article>
@@ -58,9 +58,9 @@
           <div class="article-header">
             <div class="title">
               <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#breach"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
-              <p class="article-title"><em>Breach</em><sup data-toggle="sup-text" data-target="#24"><strong>!</strong><span class="tooltip" id="24"><strong>Breach means:</strong> an unauthorized disclosure.</span></sup></p>
-              <p class="article-subtitle">How we will notify you and protect your data in case of an improper disclosure</p>
-              <p class="screen-reader-text">More information on data handling. Not scored.</p>
+              <p class="article-title"><em>Breach</em><sup data-toggle="sup-text" data-target="#24"><strong>!</strong><span class="tooltip" id="24"><strong>Breach:</strong> an unauthorized disclosure.</span></sup></p>
+              <p class="article-subtitle">How we will notify you and protect your data in the event of an improper disclosure</p>
+              <p class="screen-reader-text">More information on data handling (not scored).</p>
               <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span></div>
             </div>
           </div>
@@ -79,7 +79,7 @@
               <a aria-hidden="true" href="#" data-toggle="side-link" tabindex="-1" data-target="#contactus"><svg class="arrow" viewBox="0 0 24 24"><line x1="12" y1="15" x2="12" y2="6" /><polyline points="7.76 8 12 3.76 16.24 8" /></svg></a>
               <p class="article-title">Contact Us</p>
               <p class="article-subtitle">&nbsp;</p>
-              <p class="screen-reader-text">More information on data handling. Not scored.</p>
+              <p class="screen-reader-text">More information on data handling (not scored).</p>
               <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-neutral"></span></div>
             </div>
           </div>

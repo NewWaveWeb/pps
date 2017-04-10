@@ -9,7 +9,9 @@
 
 html,
 body{
-  height: 100%;
+  @media (max-width: $layout-breakpoint){
+    height: 100%;
+  } 
   text-rendering: optimizeLegibility;
   overflow-x:hidden;
 }

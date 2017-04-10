@@ -6,13 +6,13 @@
         <p class="article-title">{{=it.snapshot[key].label_long}}</p>
         <p class="article-subtitle">{{=it.snapshot[key].subtitle}}</p>
         {{? it.snapshot[key].score === 'success'}}
-          <p class="screen-reader-text">Adherence to privacy best practices.</p>
+          <p class="screen-reader-text">Adheres to privacy best practices.</p>
         {{?? it.snapshot[key].score === 'warning'}}
           <p class="screen-reader-text">Minor concerns about information privacy.</p>
         {{?? it.snapshot[key].score === 'danger'}}
-          <p class="screen-reader-text">Warnings about information privacy.</p>
+          <p class="screen-reader-text">Warning about information privacy.</p>
         {{??}}
-          <p class="screen-reader-text">More information on data handling. Not scored.</p>
+          <p class="screen-reader-text">More information on data handling (not scored).</p>
         {{?}}
         <div class="header-icon-holder" tabindex="-1" aria-hidden="true"><span class="level-icon icon-{{=it.snapshot[key].score}}"></span></div>
       </div>
@@ -25,7 +25,11 @@
             {{?}}
             <ul>
               {{~item.answers :statement}}
-                <li>{{=statement}}</li>
+                {{? item.score === 'success'}}
+                  <li>{{=statement}}.</li>
+                {{??}}
+                  <li class="item-danger">{{=statement}}.</li>
+                {{?}}
               {{~}}
             </ul>
         </div>
